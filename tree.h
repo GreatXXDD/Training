@@ -1,13 +1,13 @@
 #ifndef TREE_H
 #define TREE_H
 
-typedef struct
+typedef struct BTreeNode
 {
     int data;
     BTreeNode *lchild;
     BTreeNode *rchild;
 
-}BTreeNode;
+}NODE;
 
 class BiTree{
     private:
@@ -15,31 +15,33 @@ class BiTree{
         
     public:
         BiTree(){root=NULL;}
-        createBiTree();
+        BTreeNode* createBiTree();
+        BTreeNode* getRoot(){return root;}
+        void setRoot(BTreeNode* r){root = r;}
 
-        inOrder();
-        NotReinOrder();
+        void inOrder();
+        void NotReinOrder();
 
-        preOrder();
-        NotRepreOrder();
+        void preOrder();
+        void NotRepreOrder();
 
-        postOrder();
+        void postOrder();
 
-        BiTreeSize();
+        int BiTreeSize();
 
-        BiTreeLeaves()
+        int BiTreeLeaves();
 
-        BiTreeHeight()
+        int BiTreeHeight();
 
 
     protected:
-        inOrder(BTreeNode*);
-        preOrder(BTreeNode*);
-        postOrder(BTreeNode*);
-        BiTreeSize(BTreeNode*);
-        BiTreeLeaves(BTreeNode*);
-        BiTreeHeight(BTreeNode*);
+        void inOrder(BTreeNode*);
+        void preOrder(BTreeNode*);
+        void postOrder(BTreeNode*);
+        int BiTreeSize(BTreeNode*);
+        int BiTreeLeaves(BTreeNode*);
+        int BiTreeHeight(BTreeNode*);
 
-}
+};
 
 #endif
