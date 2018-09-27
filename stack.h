@@ -28,7 +28,7 @@ class Stack{
         int Top();
         int Size();
 };
-
+ 
 bool Stack::Empty()
 {
     if(top==-1)
@@ -72,8 +72,6 @@ int Stack::Top()
 }
 
 int Stack::Size(){
-
-    int i;
     return top+1;
 }
 
