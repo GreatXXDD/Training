@@ -72,6 +72,8 @@ int Stack::Top()
 }
 
 int Stack::Size(){
+
+    int i;
     return top+1;
 }
 
