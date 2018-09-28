@@ -28,10 +28,11 @@ class BiTree{
         void postOrder();
 
         int BiTreeSize();
-
         int BiTreeLeaves();
-
         int BiTreeHeight();
+
+        void DFSTree();
+        void BFSTree();
 
 
     protected:

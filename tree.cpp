@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stack>
 #include "tree.h"
+#include <queue>
 
 using namespace std;
 
@@ -111,6 +112,50 @@ void BiTree::postOrder(BTreeNode *r)
         postOrder(r->rchild);
         cout<<r->data<<" ";
     }
+}
+
+
+void BiTree::DFSTree()
+{
+    stack<BTreeNode *> s;
+    BTreeNode *r=getRoot();
+    s.push(r);
+
+    while(!s.empty())
+    {
+        r = s.top();
+        cout<<r->data<<endl;
+        s.pop();
+        
+
+        if(r->rchild!=0)
+        {
+            s.push(r->rchild);
+        }
+        if(r->lchild!=0)
+        {
+            s.push(r->lchild);
+        }
+    }
+}
+
+void BiTree::BFSTree()
+{
+    queue<BTreeNode*> q;
+    BTreeNode *r=getRoot();
+    q.push(r);
+    
+    while(q.empty()!=0)
+    {
+        r=q.front()
+        cout<<r->data<<endl;
+        q.pop();
+        if(r->lchild)
+            q.push(r->lchild);
+        if(r->rchild)
+            q.push(r->rchild)
+    }
+
 }
 
 int BiTree::BiTreeSize()
