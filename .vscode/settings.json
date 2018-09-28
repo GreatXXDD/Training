@@ -1,6 +1,9 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "array": "cpp"
+        "array": "cpp",
+        "*.ipp": "cpp",
+        "*.tcc": "cpp",
+        "slist": "cpp"
     }
 }
