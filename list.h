@@ -13,7 +13,7 @@ private:
     listNode *head;
     int len;
 public:
-    List(){head=NULL;len=0;}
+    List(){head=nullptr;len=0;}
     ~List();
     void creatlist(int elem);
     void clearList();
@@ -23,11 +23,12 @@ public:
     int getlength(){return len;}
     void print();
     void reverse();
+
 };
 
 List::~List()
 {
-    while(head!=NULL)
+    while(head!=nullptr)
     {
         listNode *s = head;
         head = head->next;
@@ -40,13 +41,13 @@ void List::creatlist(int elem)
 {
     head = new listNode;
     head->data = elem;
-    head->next = NULL;
+    head->next = nullptr;
     len++;
 }
 
 void List::clearList()
 {
-    while(head!=NULL)
+    while(head!=nullptr)
     {
         listNode *s = head;
         head = head->next;
@@ -92,7 +93,7 @@ void List::print()
 {
     listNode *cur =new listNode;
     cur =head;
-    while(cur!=NULL)
+    while(cur!=nullptr)
     {
         cout<<cur->data<<" ";
         cur = cur->next;
@@ -112,8 +113,10 @@ void List::reverse()
         q=p;
         p=tmp;
     }
-    head->next=NULL;
+    head->next=nullptr;
     head = q;
 }
+
+
 
 #endif
